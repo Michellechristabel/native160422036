@@ -15,7 +15,13 @@ import com.moonnieyy.studentproject.model.Student
 
 class DetailViewModel(app: Application): AndroidViewModel(app) {
     val studentLD = MutableLiveData<Student>()
+    val TAG = "volleytag"
     private var queue: RequestQueue? = null
+
+    fun update() {
+        //diisi coding untuk simpan studentLD object ke serve
+        //pake volley
+    }
 
     fun fetch(id:String) {
         queue = Volley.newRequestQueue(getApplication())
