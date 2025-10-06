@@ -56,7 +56,7 @@ class ListViewModel(application: Application): AndroidViewModel(application) {
 
                 // baca json string dari file
                 val hasil = filehelper.readFromFile()
-                val listStudent = Gson.fromJason<List<Student>>(hasil, sType)
+                val listStudent = Gson().fromJson<List<Student>>(hasil, sType)
                 Log.d("print_file", listStudent.toString())
 
             },
